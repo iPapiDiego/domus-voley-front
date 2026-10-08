@@ -1,0 +1,356 @@
+---
+// TacticalBoardV2.astro - Interactive 2.5D Volleyball Court Simulator & Tactical HUD
+---
+
+<section id="tactica" class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[#020d17] relative overflow-hidden">
+  <!-- Tactical background grid & ambient lighting -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute inset-0 tactical-grid opacity-25"></div>
+    <div class="absolute top-1/4 -left-48 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 -right-48 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    
+    <!-- Section Heading -->
+    <div data-section-heading class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/30 text-teal-300 text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4">
+        <span>ESTRATEGIA & POSICIONES OFICIALES</span>
+      </div>
+      <h2 class="font-athletic text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-3 sm:mb-4">
+        PIZARRA TÁCTICA <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-200">INTERACTIVA</span>
+      </h2>
+      <p class="font-sans text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed">
+        El vóley moderno exige especialización inteligente. Selecciona cualquier zona de nuestra cancha interactiva para descubrir los roles, métricas de rendimiento y ejercicios de entrenamiento en Domus.
+      </p>
+    </div>
+
+    <!-- Position Quick Navigation Tabs -->
+    <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-3 mb-8 sm:mb-10 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar" role="tablist" aria-label="Selector de posiciones">
+      <button 
+        type="button" 
+        data-pos-tab="punta"
+        class="shrink-0 px-3.5 py-2 sm:px-4 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-teal-600 text-white border-teal-400 shadow-md shadow-teal-600/30"
+        role="tab"
+        aria-selected="true"
+      >
+        Punta (Z4)
+      </button>
+      <button 
+        type="button" 
+        data-pos-tab="armador"
+        class="shrink-0 px-3.5 py-2 sm:px-4 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+        role="tab"
+        aria-selected="false"
+      >
+        Armador (Z2)
+      </button>
+      <button 
+        type="button" 
+        data-pos-tab="central"
+        class="shrink-0 px-3.5 py-2 sm:px-4 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+        role="tab"
+        aria-selected="false"
+      >
+        Central (Z3)
+      </button>
+      <button 
+        type="button" 
+        data-pos-tab="opuesto"
+        class="shrink-0 px-3.5 py-2 sm:px-4 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+        role="tab"
+        aria-selected="false"
+      >
+        Opuesto (Z1)
+      </button>
+      <button 
+        type="button" 
+        data-pos-tab="libero"
+        class="shrink-0 px-3.5 py-2 sm:px-4 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+        role="tab"
+        aria-selected="false"
+      >
+        Líbero (Defensa)
+      </button>
+      <button 
+        type="button" 
+        data-pos-tab="semillero"
+        class="shrink-0 px-3.5 py-2 sm:px-4 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+        role="tab"
+        aria-selected="false"
+      >
+        Semillero
+      </button>
+    </div>
+
+    <!-- Court Board + Tactical HUD Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Interactive Court Graphics (Isometric 2.5D) -->
+      <div class="lg:col-span-7 flex flex-col justify-center">
+        <div 
+          data-tactical-court 
+          class="relative w-full aspect-[4/3] sm:aspect-[16/11] rounded-2xl bg-gradient-to-b from-[#082236] to-[#041624] border-2 border-teal-500/30 p-3 sm:p-5 shadow-2xl flex flex-col justify-between overflow-hidden"
+        >
+          <!-- Net Bar at top (Red Reglamentaria) -->
+          <div class="relative w-full h-8 sm:h-9 bg-[#03131e] border-b-4 border-amber-400 flex items-center justify-between px-3 sm:px-4 shadow-md">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-teal-400 animate-ping"></span>
+              <span class="text-[9px] sm:text-[11px] font-black uppercase tracking-widest text-amber-400 font-sans">
+                RED FIVB (LÍNEA CENTRAL)
+              </span>
+            </div>
+            <span class="text-[9px] sm:text-[10px] font-bold text-teal-300 uppercase tracking-wider">
+              CAMPO DOMUS
+            </span>
+          </div>
+
+          <!-- Attack Line (Línea de 3 Metros) -->
+          <div class="absolute top-[35%] left-0 right-0 h-0.5 border-t-2 border-dashed border-teal-400/60 flex items-center justify-end px-3">
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-teal-300 bg-[#041624]/90 px-2 py-0.5 rounded border border-teal-500/30">
+              Línea de 3 Metros
+            </span>
+          </div>
+
+          <!-- Court Floor Markings -->
+          <div class="absolute inset-x-3 sm:inset-x-5 inset-y-10 sm:inset-y-12 border-2 border-white/20 pointer-events-none rounded"></div>
+
+          <!-- Interactive Player Nodes on Court -->
+          <div class="relative z-10 w-full h-full pt-2 sm:pt-4">
+
+            <!-- Node 1: Punta Receptor (Zona 4 - Ataque Izquierdo) -->
+            <button 
+              type="button" 
+              data-position-key="punta"
+              aria-label="Seleccionar Punta Receptor Zona 4"
+              aria-pressed="true"
+              class="absolute top-[18%] left-[18%] -translate-x-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-2xl flex flex-col items-center gap-1 cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            >
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-teal-600 text-white font-athletic text-base sm:text-2xl font-black flex items-center justify-center shadow-lg shadow-teal-600/40 border-2 border-white ring-2 sm:ring-4 ring-teal-400 scale-105 sm:scale-110">
+                4
+              </div>
+              <span class="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider text-white bg-slate-900/90 px-1.5 py-0.5 rounded border border-white/10 shadow whitespace-nowrap">
+                Punta (Z4)
+              </span>
+            </button>
+
+            <!-- Node 2: Central (Zona 3 - Red Centro) -->
+            <button 
+              type="button" 
+              data-position-key="central"
+              aria-label="Seleccionar Central Zona 3"
+              aria-pressed="false"
+              class="absolute top-[18%] left-[50%] -translate-x-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-2xl flex flex-col items-center gap-1 cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            >
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-slate-800 text-slate-200 font-athletic text-base sm:text-2xl font-black flex items-center justify-center shadow-lg border-2 border-slate-600">
+                3
+              </div>
+              <span class="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider text-white bg-slate-900/90 px-1.5 py-0.5 rounded border border-white/10 shadow whitespace-nowrap">
+                Central (Z3)
+              </span>
+            </button>
+
+            <!-- Node 3: Armador (Zona 2 - Colocación) -->
+            <button 
+              type="button" 
+              data-position-key="armador"
+              aria-label="Seleccionar Armador Zona 2"
+              aria-pressed="false"
+              class="absolute top-[18%] left-[82%] -translate-x-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-2xl flex flex-col items-center gap-1 cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            >
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-slate-800 text-slate-200 font-athletic text-base sm:text-2xl font-black flex items-center justify-center shadow-lg border-2 border-slate-600">
+                2
+              </div>
+              <span class="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider text-white bg-slate-900/90 px-1.5 py-0.5 rounded border border-white/10 shadow whitespace-nowrap">
+                Armador (Z2)
+              </span>
+            </button>
+
+            <!-- Node 4: Opuesto (Zona 1 - Ataque Zaguero & Saque) -->
+            <button 
+              type="button" 
+              data-position-key="opuesto"
+              aria-label="Seleccionar Opuesto Zona 1"
+              aria-pressed="false"
+              class="absolute top-[68%] left-[82%] -translate-x-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-2xl flex flex-col items-center gap-1 cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            >
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-slate-800 text-slate-200 font-athletic text-base sm:text-2xl font-black flex items-center justify-center shadow-lg border-2 border-slate-600">
+                1
+              </div>
+              <span class="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider text-white bg-slate-900/90 px-1.5 py-0.5 rounded border border-white/10 shadow whitespace-nowrap">
+                Opuesto (Z1)
+              </span>
+            </button>
+
+            <!-- Node 5: Líbero (Zona 6 - Defensa Fondo Central) -->
+            <button 
+              type="button" 
+              data-position-key="libero"
+              aria-label="Seleccionar Líbero Zona 6"
+              aria-pressed="false"
+              class="absolute top-[68%] left-[50%] -translate-x-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-2xl flex flex-col items-center gap-1 cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            >
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-slate-800 text-slate-200 font-athletic text-base sm:text-2xl font-black flex items-center justify-center shadow-lg border-2 border-slate-600">
+                L
+              </div>
+              <span class="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider text-white bg-slate-900/90 px-1.5 py-0.5 rounded border border-white/10 shadow whitespace-nowrap">
+                Líbero (Z6)
+              </span>
+            </button>
+
+            <!-- Node 6: Semillero / Formativo (Zona 5 - Iniciación) -->
+            <button 
+              type="button" 
+              data-position-key="semillero"
+              aria-label="Seleccionar Semillero Formativo Zona 5"
+              aria-pressed="false"
+              class="absolute top-[68%] left-[18%] -translate-x-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-2xl flex flex-col items-center gap-1 cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            >
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-slate-800 text-slate-200 font-athletic text-base sm:text-2xl font-black flex items-center justify-center shadow-lg border-2 border-slate-600">
+                ★
+              </div>
+              <span class="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider text-white bg-slate-900/90 px-1.5 py-0.5 rounded border border-white/10 shadow whitespace-nowrap">
+                Semillero
+              </span>
+            </button>
+
+          </div>
+
+          <!-- Bottom Baseline Marker -->
+          <div class="w-full text-center py-1 bg-black/40 border-t border-white/10 text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            LÍNEA DE SAQUE Y FONDO (9 METROS)
+          </div>
+        </div>
+      </div>
+
+      <!-- Tactical HUD Card (Real-time updates) -->
+      <div class="lg:col-span-5 flex flex-col justify-between p-5 sm:p-8 rounded-2xl bg-[#041a29] border border-teal-500/25 shadow-2xl relative">
+        
+        <div>
+          <!-- HUD Header -->
+          <div class="flex items-start justify-between gap-3 mb-3 sm:mb-4">
+            <div>
+              <span data-hud-zone class="text-[11px] sm:text-xs font-bold text-teal-400 uppercase tracking-widest font-sans">
+                Zona 4 (Ataque y Recepción)
+              </span>
+              <h3 data-hud-name class="font-athletic text-2xl sm:text-4xl font-black text-white uppercase tracking-tight mt-0.5">
+                Punta Receptor
+              </h3>
+            </div>
+            <span data-hud-badge class="px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider border bg-teal-500/20 text-teal-300 border-teal-500/40 shrink-0">
+              Ofensiva & Pase
+            </span>
+          </div>
+
+          <!-- Coach Philosophy / Slogan Quote -->
+          <p data-hud-slogan class="text-xs sm:text-sm italic text-slate-300 bg-white/[0.03] p-2.5 sm:p-3 rounded-xl border border-white/5 mb-4 sm:mb-6">
+            "Potencia de remate letal y temple para recibir el saque rival bajo presión."
+          </p>
+
+          <!-- Attribute Metrics Radar Bars -->
+          <div class="space-y-3.5 mb-6">
+            <!-- Metric 1: Attack Power -->
+            <div>
+              <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+                <span>Potencia de Ataque</span>
+                <span data-stat-attack-num class="text-teal-400 font-athletic text-base">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-900 overflow-hidden">
+                <div data-stat-attack class="h-full bg-gradient-to-r from-teal-500 to-emerald-400 rounded-full transition-all duration-500" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <!-- Metric 2: Jump Reach -->
+            <div>
+              <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+                <span>Salto Vertical & Alcance</span>
+                <span data-stat-jump-num class="text-cyan-400 font-athletic text-base">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-900 overflow-hidden">
+                <div data-stat-jump class="h-full bg-gradient-to-r from-cyan-500 to-teal-300 rounded-full transition-all duration-500" style="width: 92%;"></div>
+              </div>
+            </div>
+
+            <!-- Metric 3: Defense & Reflexes -->
+            <div>
+              <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+                <span>Defensa y Recepción</span>
+                <span data-stat-defense-num class="text-teal-300 font-athletic text-base">88%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-900 overflow-hidden">
+                <div data-stat-defense class="h-full bg-gradient-to-r from-teal-400 to-emerald-300 rounded-full transition-all duration-500" style="width: 88%;"></div>
+              </div>
+            </div>
+
+            <!-- Metric 4: Vision & IQ -->
+            <div>
+              <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">
+                <span>Lectura Táctica & IQ</span>
+                <span data-stat-vision-num class="text-amber-400 font-athletic text-base">85%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-900 overflow-hidden">
+                <div data-stat-vision class="h-full bg-gradient-to-r from-amber-500 to-yellow-300 rounded-full transition-all duration-500" style="width: 85%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Specs -->
+          <div class="grid grid-cols-2 gap-3 mb-6 p-3 rounded-xl bg-slate-900/70 border border-teal-500/15">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Altura de Red:</span>
+              <span data-hud-net class="text-xs font-semibold text-slate-200">2.43m (M) / 2.24m (F)</span>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Metodología:</span>
+              <span class="text-xs font-semibold text-teal-300">Formación FIVB</span>
+            </div>
+          </div>
+
+          <!-- Drills Practiced in Domus -->
+          <div class="mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">
+              Drills Clave en Domus:
+            </span>
+            <ul data-hud-drills class="space-y-1.5">
+              <li class="flex items-center gap-2 text-sm text-slate-300">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Transición 4-4 en contragolpe rápido</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-300">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Pase a zona de armado bajo saque fuerte</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-300">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Ataque contra bloqueo doble cerrado</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HUD Action CTA button -->
+        <a 
+          data-hud-cta
+          href="https://wa.me/51979833360?text=Hola%20Domus%20Voley,%20quiero%20entrenar%20en%20la%20posici%C3%B3n%20de%20Punta%20Receptor."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-400 hover:to-emerald-300 text-slate-950 font-sans font-black text-sm uppercase tracking-wider text-center transition-all duration-200 shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 flex items-center justify-center gap-2 cursor-pointer focus:outline-none focus:ring-4 focus:ring-teal-400/50 active:scale-98"
+        >
+          <svg class="w-4 h-4 text-slate-950" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          <span>Quiero entrenar en esta posición</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

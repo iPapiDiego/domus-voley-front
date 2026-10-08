@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import TacticalFundamentals from '../components/TacticalFundamentals.astro';
+import About from '../components/About.astro';
+import Categories from '../components/Categories.astro';
+import Benefits from '../components/Benefits.astro';
+import ScheduleLocation from '../components/ScheduleLocation.astro';
+import Gallery from '../components/Gallery.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Faq from '../components/Faq.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Footer from '../components/Footer.astro';
+import Modal from '../components/Modal.astro';
+import FloatingWhatsapp from '../components/FloatingWhatsapp.astro';
+---
+
+<Layout 
+  title="Domus Voleibol Club (Versión Clásica V1) | Jesús María, Lima"
+  description="Versión clásica de la academia formativa y competitiva de voleibol en el Colegio Teresa González de Fanning (Jesús María, Lima)."
+>
+  <Navbar />
+  
+  <main class="overflow-x-hidden w-full max-w-full">
+    <Hero />
+    <TacticalFundamentals />
+    <About />
+    <Categories />
+    <Benefits />
+    <ScheduleLocation />
+    <Gallery />
+    <Testimonials />
+    <Faq />
+    <CtaBanner />
+  </main>
+
+  <Footer />
+  <Modal />
+  <FloatingWhatsapp />
+
+  <!-- Separated client-side JavaScript entrypoint -->
+  <script src="../scripts/main.js"></script>
+</Layout>

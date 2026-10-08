@@ -1,0 +1,341 @@
+---
+// ActionGalleryV2.astro - Official Domus Voley Instagram Gallery & Lightbox
+---
+
+<section id="galeria" class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[#020d17] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto" data-gallery-v2>
+    
+    <!-- Section Heading -->
+    <div data-section-heading class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/30 text-teal-300 text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4">
+        <span>FOTOGRAFÍAS REALES DEL CLUB</span>
+      </div>
+      <h2 class="font-athletic text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-3 sm:mb-4">
+        GALERÍA <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-200">DOMUS EN ACCIÓN</span>
+      </h2>
+      <p class="font-sans text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed">
+        Momentos auténticos de nuestras jugadoras, entrenadores y partidos oficiales federados. Síguenos en <a href="https://www.instagram.com/domus.voleibol.club/" target="_blank" rel="noopener noreferrer" class="text-teal-400 font-bold hover:underline">@domus.voleibol.club</a>.
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex items-center justify-start md:justify-center gap-2 sm:gap-3 overflow-x-auto pb-3 mb-8 sm:mb-10 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar" role="tablist" aria-label="Filtros de Galería">
+      <button 
+        type="button"
+        data-gallery-filter="all"
+        aria-selected="true"
+        class="shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-teal-600 text-white border-teal-400 shadow-md shadow-teal-600/30"
+      >
+        Todas las Fotos
+      </button>
+      <button 
+        type="button"
+        data-gallery-filter="competencia"
+        aria-selected="false"
+        class="shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+      >
+        Liga & Campeonatos
+      </button>
+      <button 
+        type="button"
+        data-gallery-filter="entrenamiento"
+        aria-selected="false"
+        class="shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+      >
+        Entrenamientos
+      </button>
+      <button 
+        type="button"
+        data-gallery-filter="staff"
+        aria-selected="false"
+        class="shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+      >
+        Staff & Coaches
+      </button>
+      <button 
+        type="button"
+        data-gallery-filter="comunidad"
+        aria-selected="false"
+        class="shrink-0 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/80 text-slate-300 border-slate-700 hover:border-teal-500/40"
+      >
+        Familia & Club
+      </button>
+    </div>
+
+    <!-- Gallery Grid with Real Instagram Photos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Photo 1: Premiación Liga de Miraflores -->
+      <div 
+        data-gallery-category="competencia"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-10.jpg" 
+          alt="Campeonato y Trofeos en Liga Distrital de Miraflores FPV IPD" 
+          class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-amber-300 uppercase tracking-widest block font-sans">Torneo Oficial FPV</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Campeonas Liga Miraflores</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo 2: Germán Félix Coach Internacional -->
+      <div 
+        data-gallery-category="staff"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-4.jpg" 
+          alt="Profesor Germán Félix Entrenador Internacional República Dominicana" 
+          class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-teal-300 uppercase tracking-widest block font-sans">Head Coach 🇩🇴</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Prof. Germán Félix</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo 3: Plantel Femenino Colegio Fanning -->
+      <div 
+        data-gallery-category="comunidad"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-9.jpg" 
+          alt="Plantel Femenino Domus Voley en Cancha Colegio Fanning" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-teal-300 uppercase tracking-widest block font-sans">Sede Jesús María</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Plantel Femenino Domus</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo 4: Partido Oficial de Campeonato -->
+      <div 
+        data-gallery-category="competencia"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-8.jpg" 
+          alt="Partido en competencia de torneo oficial Domus Voley" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-cyan-300 uppercase tracking-widest block font-sans">Encuentro Oficial</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Partido en Competencia</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo 5: Preparación Física -->
+      <div 
+        data-gallery-category="entrenamiento"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-7.jpg" 
+          alt="Sala de preparación física y fuerza Domus Voley" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-amber-300 uppercase tracking-widest block font-sans">Acondicionamiento</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Preparación Física Integral</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo 6: Minuto Táctico de Equipo -->
+      <div 
+        data-gallery-category="competencia"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-12.jpg" 
+          alt="Piña de equipo y concentración táctica Domus Voley" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-teal-300 uppercase tracking-widest block font-sans">Táctica & Unión</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Minuto Táctico en Cancha</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo 7: Drills en Cancha Techada -->
+      <div 
+        data-gallery-category="entrenamiento"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-6.jpg" 
+          alt="Entrenamiento formativo de fundamentos de voleibol" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-cyan-300 uppercase tracking-widest block font-sans">Fundamentos FIVB</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Recepción y Voleo</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo 8: Familia & Integración DVC -->
+      <div 
+        data-gallery-category="comunidad"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-11.jpg" 
+          alt="Paseo de integración de la comunidad Domus Voley" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-amber-300 uppercase tracking-widest block font-sans">Comunidad Deportiva</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Familia Domus Voley</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo 9: Flyer Oficial de Temporada -->
+      <div 
+        data-gallery-category="staff"
+        class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-teal-500/20 shadow-xl cursor-pointer hover:border-teal-400/60 transition-all duration-300"
+      >
+        <img 
+          src="/images/instagram/ig-post-1.jpg" 
+          alt="Afiche oficial de horarios y sedes en Jesús María Domus Voley" 
+          class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 filter brightness-95"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d17]/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div>
+            <span class="text-[10px] font-extrabold text-teal-300 uppercase tracking-widest block font-sans">Afiche Oficial 2026</span>
+            <span data-item-title class="font-athletic text-2xl font-bold text-white uppercase">Horarios y Sedes Oficiales</span>
+          </div>
+          <span class="p-2 rounded-xl bg-white/10 text-white backdrop-blur-sm group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Instagram Direct Banner CTA -->
+    <div class="mt-10 sm:mt-14 text-center">
+      <a 
+        href="https://www.instagram.com/domus.voleibol.club/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-[#041a29] border border-teal-500/30 hover:border-teal-400 text-teal-200 hover:text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-xl group hover:scale-[1.02] max-w-xl mx-auto text-center"
+      >
+        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-teal-400 group-hover:text-cyan-300 transition-colors shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        <span>Ver más fotos y entrenamientos en <strong>@domus.voleibol.club</strong> (+8.6K)</span>
+        <span class="text-teal-400 group-hover:translate-x-1 transition-transform hidden sm:inline">→</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Lightbox Modal in Teal/Ocean Navy -->
+  <div 
+    data-v2-lightbox 
+    class="fixed inset-0 z-50 bg-[#010910]/95 backdrop-blur-md hidden items-center justify-center p-4 sm:p-8"
+  >
+    <button 
+      type="button"
+      data-v2-lightbox-close 
+      aria-label="Cerrar visor de fotografía"
+      class="absolute top-6 right-6 text-slate-300 hover:text-white p-3 rounded-full bg-slate-800/80 hover:bg-slate-700/80 border border-teal-500/30 transition-all cursor-pointer z-10"
+    >
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="max-w-5xl max-h-[88vh] flex flex-col items-center">
+      <img 
+        data-v2-lightbox-img 
+        src="" 
+        alt="" 
+        class="max-w-full max-h-[75vh] object-contain rounded-2xl border border-teal-500/30 shadow-2xl" 
+      />
+      <p 
+        data-v2-lightbox-title 
+        class="mt-4 text-center font-athletic text-2xl font-bold text-white uppercase tracking-wider"
+      ></p>
+    </div>
+  </div>
+</section>

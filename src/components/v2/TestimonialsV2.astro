@@ -1,0 +1,111 @@
+---
+// TestimonialsV2.astro - Athlete & Parent Success Stories
+---
+
+<section class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[#03131e] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Section Heading -->
+    <div data-section-heading class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/30 text-teal-300 text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4">
+        <span>TESTIMONIOS REALES</span>
+      </div>
+      <h2 class="font-athletic text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-3 sm:mb-4">
+        VOCES DE LA <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-200">FAMILIA DOMUS</span>
+      </h2>
+      <p class="font-sans text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed">
+        Descubre cómo nuestros entrenamientos han impulsado la seguridad, técnica y rendimiento deportivo de nuestras alumnas y alumnos.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div data-reveal-stagger class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+      
+      <!-- Testimonial 1 -->
+      <div class="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#041a29] border border-teal-500/20 shadow-xl flex flex-col justify-between group hover:border-teal-400/40 transition-colors">
+        <div>
+          <!-- Star Rating -->
+          <div class="flex items-center gap-1 text-amber-400 mb-3 sm:mb-4" aria-label="5 de 5 estrellas">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+
+          <p class="text-xs sm:text-base text-slate-200 font-sans leading-relaxed italic mb-5 sm:mb-6">
+            "Mi hija empezó en el semillero con mucha timidez para golpear el balón. En 3 meses su técnica de voleo y antebrazos dio un salto enorme, y lo mejor es la confianza y disciplina que aprendió."
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 pt-4 border-t border-teal-500/15">
+          <div class="w-10 h-10 rounded-full bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold text-sm">
+            CG
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Carla Galdós</h4>
+            <span class="text-xs text-teal-400 font-sans">Madre de Alumna Semillero (8 años)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-[#041a29] border border-teal-500/20 shadow-xl flex flex-col justify-between group hover:border-teal-400/40 transition-colors">
+        <div>
+          <!-- Star Rating -->
+          <div class="flex items-center gap-1 text-amber-400 mb-4" aria-label="5 de 5 estrellas">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-200 font-sans leading-relaxed italic mb-6">
+            "Los profesores realmente corrigen los errores de postura y carrera de salto. En la posición de punta he ganado potencia de remate y ya no tengo miedo al bloqueo rival en los partidos."
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 pt-4 border-t border-teal-500/15">
+          <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-300 flex items-center justify-center font-bold text-sm">
+            VM
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Valeria Mendoza</h4>
+            <span class="text-xs text-teal-400 font-sans">Punta Receptor • Cat. Juvenil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-[#041a29] border border-teal-500/20 shadow-xl flex flex-col justify-between group hover:border-teal-400/40 transition-colors">
+        <div>
+          <!-- Star Rating -->
+          <div class="flex items-center gap-1 text-amber-400 mb-4" aria-label="5 de 5 estrellas">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-200 font-sans leading-relaxed italic mb-6">
+            "Buscaba un club para hacer deporte después del trabajo. El grupo de adultos es de primera: entrenas fuerte con balón, sudas y juegas partidos intensos cada semana en cancha techada."
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 pt-4 border-t border-teal-500/15">
+          <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold text-sm">
+            RP
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Rodrigo Ponce</h4>
+            <span class="text-xs text-teal-400 font-sans">Líbero / Armador • Cat. Adultos</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

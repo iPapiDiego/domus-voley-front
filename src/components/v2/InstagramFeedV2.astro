@@ -1,0 +1,313 @@
+---
+// InstagramFeedV2.astro - Official Live Community Feed from @domus.voleibol.club
+---
+
+<section id="instagram-feed" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#03131e] relative overflow-hidden border-t border-teal-500/10">
+  <!-- Subtle ambient glow -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- Instagram Profile Header Card -->
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14 p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#041a29]/90 border border-teal-500/25 backdrop-blur-xl shadow-2xl">
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
+        
+        <!-- Profile Avatar with Story Ring -->
+        <div class="relative shrink-0">
+          <div class="p-1 rounded-full bg-gradient-to-tr from-amber-400 via-teal-500 to-emerald-400 shadow-lg shadow-teal-500/20">
+            <img 
+              src="/images/instagram/ig-avatar.jpg" 
+              alt="Avatar oficial de DOMUS VOLEIBOL CLUB Instagram" 
+              class="w-18 h-18 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-[#041a29]"
+            />
+          </div>
+          <span class="absolute bottom-1 right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-emerald-500 border-2 border-[#041a29] flex items-center justify-center text-slate-950 font-black text-[9px] sm:text-[10px]" title="En línea">
+            ✓
+          </span>
+        </div>
+
+        <!-- Profile Details -->
+        <div class="flex-1 text-center sm:text-left space-y-2.5 sm:space-y-3 w-full">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2">
+              <h3 class="font-athletic text-xl sm:text-3xl font-black text-white tracking-wide">
+                domus.voleibol.club
+              </h3>
+              <!-- Blue checkmark -->
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+
+            <!-- Follow CTA -->
+            <div class="flex flex-wrap items-center justify-center gap-2">
+              <a 
+                href="https://www.instagram.com/domus.voleibol.club/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="px-4 sm:px-5 py-2 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-400 hover:to-emerald-300 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-teal-500/20 flex items-center gap-1.5"
+              >
+                <span>Seguir</span>
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              <a 
+                href="https://wa.me/51979833360?text=Hola%20Domus%20Voley,%20los%20encontr%C3%A9%20en%20Instagram%20y%20quiero%20informaci%C3%B3n" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="px-3.5 sm:px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 font-medium text-xs transition-all"
+              >
+                Mensaje
+              </a>
+            </div>
+          </div>
+
+          <!-- Counters -->
+          <div class="flex items-center justify-center sm:justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-slate-300">
+            <div><strong class="text-white font-athletic text-sm sm:text-base">30</strong> publicaciones</div>
+            <div><strong class="text-white font-athletic text-sm sm:text-base">8,614</strong> seguidores</div>
+            <div><strong class="text-white font-athletic text-sm sm:text-base">160</strong> seguidos</div>
+          </div>
+
+          <!-- Bio text from Instagram -->
+          <div class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans space-y-1">
+            <p class="font-bold text-white">DOMUS VOLEIBOL CLUB</p>
+            <p>🔥 <strong>Competimos en Liga de Miraflores</strong></p>
+            <p>🏆 Voleibol formativo y competitivo</p>
+            <p>📍 Jesús María (Colegio Fanning & Colegio Joseph and Mary)</p>
+            <p>🔹 Entrena con nosotros • 📞 979 833 360 / 926 612 867</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Highlights Stories Row -->
+      <div class="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-teal-500/15 flex items-center justify-start gap-4 sm:gap-6 overflow-x-auto pb-2 -mx-1 px-1 no-scrollbar">
+        <div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
+          <div class="p-0.5 rounded-full bg-teal-500/40 group-hover:bg-teal-400 transition-colors">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#03131e] flex items-center justify-center text-teal-300 text-lg sm:text-xl font-bold">
+              🏐
+            </div>
+          </div>
+          <span class="text-[10px] sm:text-[11px] text-slate-300 font-semibold">Menciones</span>
+        </div>
+
+        <div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
+          <div class="p-0.5 rounded-full bg-teal-500/40 group-hover:bg-teal-400 transition-colors">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#03131e] flex items-center justify-center text-amber-300 text-lg sm:text-xl font-bold">
+              🏆
+            </div>
+          </div>
+          <span class="text-[10px] sm:text-[11px] text-slate-300 font-semibold">Liga 2026</span>
+        </div>
+
+        <div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
+          <div class="p-0.5 rounded-full bg-teal-500/40 group-hover:bg-teal-400 transition-colors">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#03131e] flex items-center justify-center text-cyan-300 text-lg sm:text-xl font-bold">
+              ⚡
+            </div>
+          </div>
+          <span class="text-[10px] sm:text-[11px] text-slate-300 font-semibold">Físico</span>
+        </div>
+
+        <div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
+          <div class="p-0.5 rounded-full bg-teal-500/40 group-hover:bg-teal-400 transition-colors">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#03131e] flex items-center justify-center text-emerald-300 text-lg sm:text-xl font-bold">
+              📍
+            </div>
+          </div>
+          <span class="text-[10px] sm:text-[11px] text-slate-300 font-semibold">Ubicación</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram Posts Showcase Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Post 1: Horarios y flyer -->
+      <a 
+        href="https://www.instagram.com/p/DQNHTEWE_zy/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group relative rounded-2xl overflow-hidden bg-[#041a29] border border-teal-500/20 hover:border-teal-400/60 shadow-xl transition-all duration-300 flex flex-col"
+      >
+        <div class="relative aspect-square overflow-hidden bg-slate-900">
+          <img 
+            src="/images/instagram/ig-post-1.jpg" 
+            alt="Flyer oficial horarios y sedes Domus Voley Jesús María" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white font-bold">
+            <span class="flex items-center gap-1">❤️ 26</span>
+            <span class="flex items-center gap-1">💬 8</span>
+          </div>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-300 line-clamp-2 mb-3">
+            <strong>domus.voleibol.club</strong> ¿Amas el vóley? Este es tu lugar. Clases para niños, jóvenes y adultos. Martes, jueves y sábado en Jesús María.
+          </p>
+          <div class="flex items-center justify-between text-[11px] text-teal-400 font-semibold pt-2 border-t border-white/5">
+            <span>Ver publicación original</span>
+            <span>↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 2: Germán Félix -->
+      <a 
+        href="https://www.instagram.com/p/DdTvGWUSkTk/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group relative rounded-2xl overflow-hidden bg-[#041a29] border border-teal-500/20 hover:border-teal-400/60 shadow-xl transition-all duration-300 flex flex-col"
+      >
+        <div class="relative aspect-square overflow-hidden bg-slate-900">
+          <img 
+            src="/images/instagram/ig-post-4.jpg" 
+            alt="Bienvenida Germán Félix Entrenador Internacional Domus Voley" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white font-bold">
+            <span class="flex items-center gap-1">❤️ 33</span>
+            <span class="flex items-center gap-1">💬 12</span>
+          </div>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-300 line-clamp-2 mb-3">
+            <strong>domus.voleibol.club</strong> ¡BIENVENIDO GERMÁN FÉLIX! 🇩🇴 Entrenador internacional que llega a Domus para aportar su experiencia y pasión.
+          </p>
+          <div class="flex items-center justify-between text-[11px] text-teal-400 font-semibold pt-2 border-t border-white/5">
+            <span>Ver publicación original</span>
+            <span>↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 3: Liga Miraflores -->
+      <a 
+        href="https://www.instagram.com/p/DMf7DtwpeJ_/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group relative rounded-2xl overflow-hidden bg-[#041a29] border border-teal-500/20 hover:border-teal-400/60 shadow-xl transition-all duration-300 flex flex-col"
+      >
+        <div class="relative aspect-square overflow-hidden bg-slate-900">
+          <img 
+            src="/images/instagram/ig-post-2.jpg" 
+            alt="Competencia en Liga Distrital de Miraflores Domus Voley" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white font-bold">
+            <span class="flex items-center gap-1">❤️ 30</span>
+            <span class="flex items-center gap-1">💬 6</span>
+          </div>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-300 line-clamp-2 mb-3">
+            <strong>domus.voleibol.club</strong> ¡ES OFICIAL! 🔥 Empezamos a competir en torneos oficiales. Somos parte de la Liga de Miraflores.
+          </p>
+          <div class="flex items-center justify-between text-[11px] text-teal-400 font-semibold pt-2 border-t border-white/5">
+            <span>Ver publicación original</span>
+            <span>↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 4: Preparación física -->
+      <a 
+        href="https://www.instagram.com/domus.voleibol.club/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group relative rounded-2xl overflow-hidden bg-[#041a29] border border-teal-500/20 hover:border-teal-400/60 shadow-xl transition-all duration-300 flex flex-col"
+      >
+        <div class="relative aspect-square overflow-hidden bg-slate-900">
+          <img 
+            src="/images/instagram/ig-post-7.jpg" 
+            alt="Preparación física especializada en Domus Voley" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white font-bold">
+            <span class="flex items-center gap-1">❤️ 45</span>
+            <span class="flex items-center gap-1">💬 9</span>
+          </div>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-300 line-clamp-2 mb-3">
+            <strong>domus.voleibol.club</strong> La preparación física también entrena campeonas. Más fuerza para saltar, más velocidad para reaccionar.
+          </p>
+          <div class="flex items-center justify-between text-[11px] text-teal-400 font-semibold pt-2 border-t border-white/5">
+            <span>Ver publicación original</span>
+            <span>↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 5: Premiación y Medallas -->
+      <a 
+        href="https://www.instagram.com/domus.voleibol.club/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group relative rounded-2xl overflow-hidden bg-[#041a29] border border-teal-500/20 hover:border-teal-400/60 shadow-xl transition-all duration-300 flex flex-col"
+      >
+        <div class="relative aspect-square overflow-hidden bg-slate-900">
+          <img 
+            src="/images/instagram/ig-post-10.jpg" 
+            alt="Medallas y trofeo en Liga de Miraflores Domus Voley" 
+            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white font-bold">
+            <span class="flex items-center gap-1">❤️ 62</span>
+            <span class="flex items-center gap-1">💬 15</span>
+          </div>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-300 line-clamp-2 mb-3">
+            <strong>domus.voleibol.club</strong> ¡Fruto del esfuerzo diario! Nuestras atletas brillan en el podio de la Liga Distrital de Miraflores.
+          </p>
+          <div class="flex items-center justify-between text-[11px] text-teal-400 font-semibold pt-2 border-t border-white/5">
+            <span>Ver publicación original</span>
+            <span>↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 6: Comunidad y familia -->
+      <a 
+        href="https://www.instagram.com/domus.voleibol.club/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group relative rounded-2xl overflow-hidden bg-[#041a29] border border-teal-500/20 hover:border-teal-400/60 shadow-xl transition-all duration-300 flex flex-col"
+      >
+        <div class="relative aspect-square overflow-hidden bg-slate-900">
+          <img 
+            src="/images/instagram/ig-post-11.jpg" 
+            alt="Comunidad Domus Voley en salida de integración" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white font-bold">
+            <span class="flex items-center gap-1">❤️ 58</span>
+            <span class="flex items-center gap-1">💬 11</span>
+          </div>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-300 line-clamp-2 mb-3">
+            <strong>domus.voleibol.club</strong> Más que un club, una familia. Compartir fuera de la cancha fortalece nuestra química dentro de ella.
+          </p>
+          <div class="flex items-center justify-between text-[11px] text-teal-400 font-semibold pt-2 border-t border-white/5">
+            <span>Ver publicación original</span>
+            <span>↗</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>

@@ -20,12 +20,17 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
   background-color: #040f18;
   color: #f1f5f9;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 /* Sports Typography */
@@ -179,3 +184,46 @@ body {
 .animate-sports-float {
   animation: floatSports 5s ease-in-out infinite;
 }
+
+/* V2 Athletic Enhancements */
+.font-athletic {
+  font-family: 'Barlow Condensed', 'Teko', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.font-body-pro {
+  font-family: 'Barlow', 'Plus Jakarta Sans', sans-serif;
+}
+
+.glow-red {
+  box-shadow: 0 0 35px -5px rgba(220, 38, 38, 0.45);
+}
+
+.glow-red-lg {
+  box-shadow: 0 0 60px -8px rgba(239, 68, 68, 0.55);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px -4px rgba(0, 242, 212, 0.4);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px -4px rgba(245, 158, 11, 0.4);
+}
+
+.tactical-grid {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.sports-badge-angle {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.sports-card-angle {
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+}
+

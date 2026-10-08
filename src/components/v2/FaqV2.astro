@@ -1,0 +1,70 @@
+---
+// FaqV2.astro - Accessible Athletic FAQ Accordion
+const faqs = [
+  {
+    q: "¿En qué consiste la clase de prueba gratis y cómo la solicito?",
+    a: "Es una sesión 100% gratuita y completa en la que el alumno se integra al grupo de su edad. Nuestros entrenadores evalúan su nivel técnico inicial, coordinación y comodidad en cancha sin ningún compromiso de pago. Solo debes presionar 'Agendar Clase Gratis' para coordinar día y hora por WhatsApp."
+  },
+  {
+    q: "¿Dónde queda la sede de entrenamiento y qué instalaciones tiene?",
+    a: "Entrenamos en las instalaciones deportivas del Colegio Teresa González de Fanning, en el distrito de Jesús María (Lima). Contamos con canchas techadas con piso reglamentario, iluminación profesional, camerinos y graderías para los padres de familia."
+  },
+  {
+    q: "¿Se necesita experiencia previa en vóley para inscribirme?",
+    a: "No. En Domus recibimos alumnos desde principiantes absolutos en nuestro Semillero y categoría Formativa. Comenzamos desde la biomecánica básica (voleo de dedos, golpe de antebrazos y saque) hasta el juego táctico de equipo."
+  },
+  {
+    q: "¿Qué indumentaria o implementos debo llevar a mi primer entrenamiento?",
+    a: "Ropa deportiva cómoda (polo, short o licra), zapatillas deportivas limpias (preferible con buena amortiguación para pista deportiva) y un tomatodo con agua. Los balones y materiales de entrenamiento son proporcionados al 100% por el club."
+  },
+  {
+    q: "¿Los alumnos participan en torneos y partidos de competencia?",
+    a: "Sí. Para las categorías formativas organizamos festivales internos y partidos amistosos cada mes. Para las categorías juveniles y de alto rendimiento, competimos en ligas distritales y copas interclubes oficiales de Lima."
+  },
+  {
+    q: "¿Cuáles son las formas de pago de las mensualidades?",
+    a: "Aceptamos Yape, Plin, transferencias bancarias directas (BCP, BBVA, Interbank) y pagos en efectivo al inicio de ciclo. Ofrecemos descuentos especiales por pago trimestral y por hermanos inscritos."
+  }
+];
+---
+
+<section id="faq" class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[#020d17] relative overflow-hidden">
+  <div class="max-w-4xl mx-auto">
+    
+    <!-- Section Heading -->
+    <div data-section-heading class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/30 text-teal-300 text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4">
+        <span>RESOLVEMOS TUS DUDAS</span>
+      </div>
+      <h2 class="font-athletic text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-3 sm:mb-4">
+        PREGUNTAS <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-200">FRECUENTES</span>
+      </h2>
+      <p class="font-sans text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed">
+        Todo lo que necesitas saber antes de dar tu primer saque con Domus Voleibol Club.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-3 sm:space-y-4">
+      {faqs.map((item, idx) => (
+        <details class="group rounded-2xl bg-[#041a29] border border-teal-500/20 overflow-hidden transition-all duration-200 hover:border-teal-400/40">
+          <summary class="flex items-center justify-between p-4 sm:p-6 text-left cursor-pointer list-none font-sans font-bold text-sm sm:text-lg text-white select-none focus:outline-none focus:ring-2 focus:ring-teal-400 rounded-2xl">
+            <span class="flex items-center gap-2.5 sm:gap-3">
+              <span class="text-teal-400 font-athletic text-lg sm:text-xl shrink-0">0{idx + 1}.</span>
+              <span>{item.q}</span>
+            </span>
+            <span class="ml-3 sm:ml-4 shrink-0 p-1.5 rounded-full bg-white/5 text-slate-300 group-open:rotate-180 group-open:bg-teal-500 group-open:text-slate-950 transition-all duration-200">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-4 pb-5 sm:px-6 sm:pb-6 text-slate-300 font-sans text-xs sm:text-base leading-relaxed border-t border-teal-500/15 pt-3.5 sm:pt-4">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,366 @@
+---
+// CategoryMatrixV2.astro - Official Categories, Schedules & Vacancy Scanner from Domus Instagram
+---
+
+<section id="categorias" class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[#020d17] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto" data-category-matrix>
+    
+    <!-- Section Heading -->
+    <div data-section-heading class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/30 text-teal-300 text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4">
+        <span>HORARIOS OFICIALES 2026</span>
+      </div>
+      <h2 class="font-athletic text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-3 sm:mb-4">
+        HORARIOS, SEDES <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-200">& VACANTES</span>
+      </h2>
+      <p class="font-sans text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed">
+        Entrenamientos los días <strong>Martes, Jueves y Sábados</strong> en nuestras sedes de Jesús María con entrenadores acreditados COPEV e internacionales.
+      </p>
+    </div>
+
+    <!-- Category Tabs Navigation -->
+    <div class="flex items-center justify-start md:justify-center gap-2 sm:gap-3 overflow-x-auto pb-3 mb-8 sm:mb-12 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar" role="tablist" aria-label="Selector de Categorías">
+      <button 
+        type="button" 
+        data-cat-tab="semillero"
+        class="shrink-0 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-teal-600 text-white border-teal-400 shadow-lg shadow-teal-600/30"
+        role="tab"
+        aria-selected="true"
+      >
+        Sub 11 & Sub 12 (Iniciación)
+      </button>
+      <button 
+        type="button" 
+        data-cat-tab="juveniles"
+        class="shrink-0 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/90 text-slate-300 border-slate-800 hover:border-teal-500/40"
+        role="tab"
+        aria-selected="false"
+      >
+        Sub 15 (Colegio Fanning)
+      </button>
+      <button 
+        type="button" 
+        data-cat-tab="adultos"
+        class="shrink-0 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/90 text-slate-300 border-slate-800 hover:border-teal-500/40"
+        role="tab"
+        aria-selected="false"
+      >
+        Adultos Libre (Nocturno)
+      </button>
+      <button 
+        type="button" 
+        data-cat-tab="competencia"
+        class="shrink-0 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer bg-slate-900/90 text-slate-300 border-slate-800 hover:border-teal-500/40"
+        role="tab"
+        aria-selected="false"
+      >
+        Liga de Miraflores
+      </button>
+    </div>
+
+    <!-- Panel 1: Sub 11 & Sub 12 -->
+    <div data-cat-panel="semillero" class="space-y-6 sm:space-y-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center bg-[#041a29] border border-teal-500/20 rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 shadow-2xl">
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+              Sede: Colegio Joseph and Mary
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider animate-pulse">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+              INSCRIPCIONES ABIERTAS 2026
+            </span>
+          </div>
+
+          <h3 class="font-athletic text-2xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+            Categorías Sub 11 & Sub 12
+          </h3>
+
+          <p class="text-xs sm:text-base text-slate-300 font-sans leading-relaxed">
+            Formación desde cero con enfoque pedagógico. Los pequeños desarrollan motricidad, técnica de voleo, antebrazo y compañerismo con entrenadores certificados COPEV.
+          </p>
+
+          <!-- Schedules exact from flyer -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-teal-300 uppercase tracking-wider">SUB 11</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 font-bold">Col. Joseph and Mary</span>
+              </div>
+              <p class="text-base font-black text-white font-athletic">4:30 PM - 6:00 PM</p>
+              <span class="text-xs text-slate-400">Martes, Jueves y Sábado</span>
+            </div>
+            <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-cyan-300 uppercase tracking-wider">SUB 12</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-bold">Col. Joseph and Mary</span>
+              </div>
+              <p class="text-base font-black text-white font-athletic">6:00 PM - 7:30 PM</p>
+              <span class="text-xs text-slate-400">Martes, Jueves y Sábado</span>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button 
+            type="button"
+            data-open-enroll-modal
+            data-preset-category="Sub 11 / Sub 12 (Colegio Joseph and Mary)"
+            class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-400 hover:to-emerald-300 text-slate-950 font-sans font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-xl shadow-teal-500/30 hover:shadow-teal-500/50 cursor-pointer flex items-center justify-center gap-2"
+          >
+            <span>Reservar Clase de Prueba Gratis</span>
+            <svg class="w-4 h-4 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Real photo card -->
+        <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] border border-teal-500/30 shadow-xl">
+          <img 
+            src="/images/instagram/ig-post-9.jpg" 
+            alt="Plantel infantil de voleibol en Colegio Fanning Jesús María" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041a29] via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="text-xs font-bold text-teal-300 uppercase tracking-wider block font-sans">Sede Jesús María</span>
+            <p class="text-sm font-semibold text-white">Equipo Formativo Domus Voley</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 2: Sub 15 (Colegio Fanning) -->
+    <div data-cat-panel="juveniles" class="space-y-6 sm:space-y-8 hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center bg-[#041a29] border border-teal-500/20 rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 shadow-2xl">
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+            <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+              Sede: Colegio Fanning
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              NIVEL COMPETITIVO
+            </span>
+          </div>
+
+          <h3 class="font-athletic text-2xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+            Categoría Sub 15
+          </h3>
+
+          <p class="text-xs sm:text-base text-slate-300 font-sans leading-relaxed">
+            Especialización por posiciones tácticas (Armador, Central, Punta, Líbero y Opuesto), desarrollo de salto vertical y preparación táctica para torneos distritales.
+          </p>
+
+          <!-- Schedules exact from flyer -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5 sm:col-span-2">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-teal-300 uppercase tracking-wider">SUB 15 OFICIAL</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 font-bold">Col. Teresa González de Fanning</span>
+              </div>
+              <p class="text-lg sm:text-xl font-black text-white font-athletic">6:00 PM - 7:30 PM</p>
+              <span class="text-xs text-slate-400">Martes, Jueves y Sábado • Av. Arnaldo Márquez 551</span>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button 
+            type="button"
+            data-open-enroll-modal
+            data-preset-category="Sub 15 (Colegio Fanning)"
+            class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-400 hover:to-emerald-300 text-slate-950 font-sans font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-xl shadow-teal-500/30 hover:shadow-teal-500/50 cursor-pointer flex items-center justify-center gap-2"
+          >
+            <span>Reservar Clase de Prueba Gratis</span>
+            <svg class="w-4 h-4 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Real photo card -->
+        <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] border border-teal-500/30 shadow-xl">
+          <img 
+            src="/images/instagram/ig-post-6.jpg" 
+            alt="Entrenamiento formativo de vóley femenino en Jesús María" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041a29] via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="text-xs font-bold text-teal-300 uppercase tracking-wider block font-sans">Colegio Fanning</span>
+            <p class="text-sm font-semibold text-white">Drills Técnicos y Postura Competitiva</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 3: Adultos Libre -->
+    <div data-cat-panel="adultos" class="space-y-6 sm:space-y-8 hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center bg-[#041a29] border border-teal-500/20 rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 shadow-2xl">
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+              Turno Nocturno
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+              Ambos Colegios
+            </span>
+          </div>
+
+          <h3 class="font-athletic text-2xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+            Adultos Libre (Varones & Mujeres)
+          </h3>
+
+          <p class="text-xs sm:text-base text-slate-300 font-sans leading-relaxed">
+            Horario ideal después del trabajo o estudios. Combina acondicionamiento físico, corrección técnica de juego y partidos continuos en cancha techada.
+          </p>
+
+          <!-- Schedules exact from flyer -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-teal-300 uppercase tracking-wider">SEDE FANNING</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 font-bold">Col. Fanning</span>
+              </div>
+              <p class="text-base font-black text-white font-athletic">7:30 PM - 9:00 PM</p>
+              <span class="text-xs text-slate-400">Martes, Jueves y Sábado</span>
+            </div>
+            <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-cyan-300 uppercase tracking-wider">SEDE JOSEPH & MARY</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-bold">Col. Joseph and Mary</span>
+              </div>
+              <p class="text-base font-black text-white font-athletic">7:30 PM - 9:00 PM</p>
+              <span class="text-xs text-slate-400">Martes, Jueves y Sábado</span>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button 
+            type="button"
+            data-open-enroll-modal
+            data-preset-category="Adultos Libre (Turno Noche)"
+            class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-400 hover:to-emerald-300 text-slate-950 font-sans font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-xl shadow-teal-500/30 hover:shadow-teal-500/50 cursor-pointer flex items-center justify-center gap-2"
+          >
+            <span>Reservar Clase de Prueba Gratis</span>
+            <svg class="w-4 h-4 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Real photo card -->
+        <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] border border-teal-500/30 shadow-xl">
+          <img 
+            src="/images/instagram/ig-post-5.jpg" 
+            alt="Entrenamiento nocturno de adultos en Domus Voley Jesús María" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041a29] via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="text-xs font-bold text-teal-300 uppercase tracking-wider block font-sans">Turno Nocturno</span>
+            <p class="text-sm font-semibold text-white">Recepción, Armado y Partido Continuo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 4: Liga de Miraflores -->
+    <div data-cat-panel="competencia" class="space-y-6 sm:space-y-8 hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center bg-[#041a29] border border-teal-500/20 rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 shadow-2xl">
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+              Liga Distrital de Miraflores
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+              FPV & IPD
+            </span>
+          </div>
+
+          <h3 class="font-athletic text-2xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+            Equipo de Competencia Oficial
+          </h3>
+
+          <p class="text-xs sm:text-base text-slate-300 font-sans leading-relaxed">
+            Representamos a Domus Voleibol Club en la liga federada oficial. Entrenamiento táctico avanzado dirigido por el Prof. Germán Félix (🇩🇴) y cuerpo técnico COPEV.
+          </p>
+
+          <!-- Key Highlights -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5">
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-1">Director Técnico</span>
+              <p class="text-base font-black text-white font-athletic">Prof. Germán Félix 🇩🇴</p>
+              <span class="text-xs text-slate-400">Entrenador Internacional</span>
+            </div>
+            <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5">
+              <span class="text-xs font-bold text-teal-400 uppercase tracking-wider block mb-1">Palmarés 2025 - 2026</span>
+              <p class="text-base font-black text-white font-athletic">Trofeos & Medallas</p>
+              <span class="text-xs text-slate-400">Liga Oficial de Voleibol</span>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <a 
+            href="https://wa.me/51979833360?text=Hola%20Domus%20Voley,%20deseo%20postular%20al%20equipo%20de%20competencia%20de%20la%20Liga%20de%20Miraflores"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-400 hover:to-emerald-300 text-slate-950 font-sans font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-xl shadow-teal-500/30 hover:shadow-teal-500/50 cursor-pointer"
+          >
+            <span>Consultar por Selectivo de Competencia</span>
+            <svg class="w-4 h-4 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Real photo card -->
+        <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] border border-teal-500/30 shadow-xl">
+          <img 
+            src="/images/instagram/ig-post-10.jpg" 
+            alt="Campeonato oficial en Liga de Miraflores Domus Voley" 
+            class="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041a29] via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="text-xs font-bold text-amber-300 uppercase tracking-wider block font-sans">Premiación Oficial</span>
+            <p class="text-sm font-semibold text-white">Medallas y Trofeo Liga Distrital</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official flyer thumbnail callout -->
+    <div class="mt-8 sm:mt-12 p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#031826] border border-teal-500/20 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+      <div class="flex items-center gap-3.5 sm:gap-4 w-full md:w-auto">
+        <img 
+          src="/images/instagram/ig-post-1.jpg" 
+          alt="Flyer oficial de horarios Domus Voleibol Club Jesús María" 
+          class="w-14 h-18 sm:w-16 sm:h-20 object-cover rounded-xl border border-teal-400/40 shadow-md shrink-0 cursor-pointer hover:scale-105 transition-transform"
+          data-open-flyer-lightbox
+        />
+        <div>
+          <span class="text-[11px] sm:text-xs font-bold text-teal-400 uppercase tracking-wider block">Afiche Oficial de Inscripciones</span>
+          <h4 class="text-base sm:text-lg font-athletic font-bold text-white">Sede Jesús María: Av. Arnaldo Márquez 551</h4>
+          <p class="text-xs text-slate-300">WhatsApp Oficial: 979 833 360 / 926 612 867 • Instagram: @domus.voleibol.club</p>
+        </div>
+      </div>
+      <a 
+        href="https://wa.me/51979833360?text=Hola%20Domus%20Voley,%20vi%20el%20flyer%20oficial%20y%20deseo%20inscribirme"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full md:w-auto shrink-0 px-6 py-3 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+      >
+        <span>Escribir al WhatsApp</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>

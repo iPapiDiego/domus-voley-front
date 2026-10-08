@@ -1,0 +1,57 @@
+---
+// CtaBannerV2.astro - High-Conversion Sports Call to Action Strip
+---
+
+<section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-[#0b496d] via-[#073652] to-[#031826] w-full max-w-full">
+  <!-- Decorative court elements in background -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute right-0 -bottom-24 w-96 h-96 rounded-full bg-teal-500/15 blur-3xl"></div>
+    <div class="absolute inset-0 tactical-grid opacity-15"></div>
+  </div>
+
+  <div class="w-full max-w-5xl mx-auto text-center relative z-10 flex flex-col items-center min-w-0">
+    
+    <!-- Top Pill -->
+    <div class="inline-flex items-center max-w-full gap-2 px-3.5 py-1.5 rounded-full bg-black/40 border border-teal-400/30 text-teal-200 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6 backdrop-blur-md min-w-0">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+      <span class="truncate min-w-0">MATRÍCULAS ABIERTAS 2026 • JESÚS MARÍA</span>
+    </div>
+
+    <!-- Main Title -->
+    <h2 class="font-athletic text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-none mb-4 sm:mb-6 drop-shadow-xl w-full max-w-4xl break-words">
+      ¿LISTO PARA DESATAR TU <span class="text-teal-300">MÁXIMO POTENCIAL</span> EN LA CANCHA?
+    </h2>
+
+    <p class="font-sans text-sm sm:text-lg text-teal-100/90 w-full max-w-2xl mb-8 sm:mb-10 leading-relaxed font-normal">
+      Únete a Domus Voleibol Club y entrena con profesores de primer nivel en el Colegio Teresa González de Fanning. La primera clase de prueba es completamente gratis.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-xl mx-auto">
+      <button 
+        type="button"
+        data-open-enroll-modal
+        data-preset-category="Semillero Formativo (6-11 años)"
+        class="w-full sm:flex-1 px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-300 hover:to-emerald-300 text-slate-950 font-sans font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-2xl hover:shadow-teal-400/25 hover:-translate-y-0.5 cursor-pointer focus:outline-none focus:ring-4 focus:ring-teal-300 active:scale-95 flex items-center justify-center gap-2"
+      >
+        <span class="truncate">Solicitar Clase Gratis</span>
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-slate-950 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </button>
+
+      <a 
+        href="https://wa.me/51979833360?text=Hola%20Domus%20Voley,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20horarios%20y%20precios%202026"
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="w-full sm:flex-1 px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-[#041a29]/80 hover:bg-[#07253a] text-teal-100 border-2 border-teal-400/30 font-sans font-bold text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 backdrop-blur-md cursor-pointer flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-teal-400/30"
+      >
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+        </svg>
+        <span class="truncate">WhatsApp Directo</span>
+      </a>
+    </div>
+
+  </div>
+</section>

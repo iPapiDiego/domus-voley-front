@@ -9,6 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "astro build && wrangler pages deploy dist",
+    "pages:dev": "astro build && wrangler pages dev dist",
     "astro": "astro"
   },
   "dependencies": {
@@ -22,6 +24,7 @@
     "esbuild": true
   },
   "devDependencies": {
-    "playwright": "^1.64.0"
+    "playwright": "^1.64.0",
+    "wrangler": "^4.149.0"
   }
 }

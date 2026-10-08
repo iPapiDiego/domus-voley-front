@@ -1,0 +1,198 @@
+---
+// NavbarV2.astro - Spacious, Uncompressed Athletic Floating Header for Domus Voleibol Club
+---
+
+<header 
+  data-navbar-v2 
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-4 sm:pt-5 px-4 sm:px-6 lg:px-8"
+>
+  <div class="max-w-7xl mx-auto rounded-2xl bg-[#03131e]/90 backdrop-blur-xl border border-teal-500/25 shadow-2xl shadow-black/80 px-3.5 sm:px-7 py-3 sm:py-4 flex items-center justify-between transition-all duration-300">
+    
+    <!-- Brand / Escudo (Left) -->
+    <a href="/" class="flex items-center gap-2.5 sm:gap-3.5 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-400 rounded-xl p-1 shrink-0">
+      <div class="relative w-9 h-9 sm:w-12 sm:h-12 rounded-full ring-2 ring-teal-500/40 p-0.5 bg-[#03131e] group-hover:ring-teal-400 group-hover:scale-105 transition-all duration-300 shadow-md shadow-teal-500/20 shrink-0">
+        <img 
+          src="/images/logo.png" 
+          alt="Escudo Oficial Domus Voleibol Club" 
+          class="w-full h-full object-cover rounded-full"
+          width="48"
+          height="48"
+          loading="eager"
+        />
+      </div>
+      <div class="flex flex-col">
+        <div class="flex items-center gap-1.5 sm:gap-2">
+          <span class="font-athletic text-xl sm:text-[26px] font-black tracking-wide text-white group-hover:text-teal-300 transition-colors whitespace-nowrap">
+            DOMUS <span class="text-teal-400">VOLEY</span>
+          </span>
+          <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-teal-400 animate-pulse"></span>
+        </div>
+        <span class="text-[9px] sm:text-[10px] font-extrabold text-teal-400 tracking-widest uppercase font-sans -mt-0.5 whitespace-nowrap">
+          Jesús María • Academia
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links (Center) - Generous Spacing & Strictly Single Line (whitespace-nowrap) -->
+    <nav class="hidden xl:flex items-center gap-3.5 2xl:gap-6 text-xs font-bold text-slate-300 font-sans tracking-wide uppercase" aria-label="Navegación Principal V2">
+      <a 
+        href="#tactica" 
+        data-nav-link-v2 
+        class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 whitespace-nowrap cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-emerald-400 after:transition-all after:duration-300"
+      >
+        Pizarra Táctica
+      </a>
+      <a 
+        href="#experiencia" 
+        data-nav-link-v2 
+        class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 whitespace-nowrap cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-emerald-400 after:transition-all after:duration-300"
+      >
+        Experiencia
+      </a>
+      <a 
+        href="#categorias" 
+        data-nav-link-v2 
+        class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 whitespace-nowrap cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-emerald-400 after:transition-all after:duration-300"
+      >
+        Horarios & Sedes
+      </a>
+      <a 
+        href="#cotizador" 
+        data-nav-link-v2 
+        class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 whitespace-nowrap cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-emerald-400 after:transition-all after:duration-300"
+      >
+        Calculadora
+      </a>
+      <a 
+        href="#galeria" 
+        data-nav-link-v2 
+        class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 whitespace-nowrap cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-emerald-400 after:transition-all after:duration-300"
+      >
+        Galería
+      </a>
+      <a 
+        href="#instagram-feed" 
+        data-nav-link-v2 
+        class="relative py-1 text-teal-300 hover:text-teal-200 transition-colors duration-200 whitespace-nowrap cursor-pointer flex items-center gap-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-emerald-400 after:transition-all after:duration-300"
+      >
+        <span>Instagram</span>
+        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 font-extrabold tracking-normal">8.6K</span>
+      </a>
+    </nav>
+
+    <!-- Header Actions (CTA + Discrete Controls) (Right) -->
+    <div class="hidden sm:flex items-center gap-3 shrink-0">
+      
+      <!-- Switch to V1 Pill (Compact & Elegant) -->
+      <a 
+        href="/v1" 
+        class="px-3 py-2 rounded-xl border border-slate-700/60 hover:border-teal-500/40 text-[11px] font-bold text-slate-400 hover:text-teal-300 transition-all duration-200 flex items-center gap-1.5 bg-slate-900/50 cursor-pointer whitespace-nowrap shrink-0"
+        title="Ver versión V1 clásica"
+      >
+        <svg class="w-3.5 h-3.5 text-teal-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>V1</span>
+      </a>
+
+      <!-- Primary CTA button in Official Teal/Emerald -->
+      <button 
+        type="button"
+        data-open-enroll-modal
+        data-preset-category="Sub 15 (Colegio Fanning)"
+        class="relative group px-5 xl:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-400 hover:to-emerald-300 text-slate-950 text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-lg shadow-teal-500/25 hover:shadow-teal-500/45 cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-300 active:scale-95 whitespace-nowrap shrink-0 flex items-center gap-2"
+      >
+        <span>Clase Gratis</span>
+        <svg class="w-3.5 h-3.5 text-slate-950 transform group-hover:translate-x-1 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Hamburger Toggle Button -->
+    <button 
+      type="button"
+      data-mobile-menu-toggle-v2 
+      aria-label="Abrir menú de navegación móvil"
+      aria-expanded="false"
+      class="xl:hidden p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-teal-500/10 border border-transparent hover:border-teal-500/20 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-400 shrink-0"
+    >
+      <svg class="w-6 h-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div 
+    data-mobile-menu-v2 
+    class="hidden xl:hidden max-w-7xl mx-auto mt-2 p-4 sm:p-5 rounded-2xl bg-[#03131e]/98 border border-teal-500/25 backdrop-blur-xl shadow-2xl flex flex-col gap-1.5 sm:gap-2 font-sans max-h-[82vh] overflow-y-auto"
+  >
+    <a 
+      href="#tactica" 
+      data-nav-link-v2 
+      class="px-4 py-3 rounded-xl text-slate-200 hover:bg-teal-500/10 hover:text-teal-300 font-semibold text-sm transition-colors cursor-pointer flex items-center gap-2.5"
+    >
+      <span class="text-teal-400 text-base">🏐</span> Pizarra Táctica 2.5D
+    </a>
+    <a 
+      href="#experiencia" 
+      data-nav-link-v2 
+      class="px-4 py-3 rounded-xl text-slate-200 hover:bg-teal-500/10 hover:text-teal-300 font-semibold text-sm transition-colors cursor-pointer flex items-center gap-2.5"
+    >
+      <span class="text-teal-400 text-base">⚡</span> Experiencia Domus
+    </a>
+    <a 
+      href="#categorias" 
+      data-nav-link-v2 
+      class="px-4 py-3 rounded-xl text-slate-200 hover:bg-teal-500/10 hover:text-teal-300 font-semibold text-sm transition-colors cursor-pointer flex items-center gap-2.5"
+    >
+      <span class="text-teal-400 text-base">🏆</span> Horarios & Sedes
+    </a>
+    <a 
+      href="#cotizador" 
+      data-nav-link-v2 
+      class="px-4 py-3 rounded-xl text-slate-200 hover:bg-teal-500/10 hover:text-teal-300 font-semibold text-sm transition-colors cursor-pointer flex items-center gap-2.5"
+    >
+      <span class="text-teal-400 text-base">📊</span> Calculadora de Matrícula
+    </a>
+    <a 
+      href="#galeria" 
+      data-nav-link-v2 
+      class="px-4 py-3 rounded-xl text-slate-200 hover:bg-teal-500/10 hover:text-teal-300 font-semibold text-sm transition-colors cursor-pointer flex items-center gap-2.5"
+    >
+      <span class="text-teal-400 text-base">📸</span> Galería en Acción
+    </a>
+    <a 
+      href="#instagram-feed" 
+      data-nav-link-v2 
+      class="px-4 py-3 rounded-xl text-slate-200 hover:bg-teal-500/10 hover:text-teal-300 font-semibold text-sm transition-colors cursor-pointer flex items-center gap-2.5"
+    >
+      <span class="text-teal-400 text-base">📱</span> Instagram Oficial (+8.6K)
+    </a>
+    <a 
+      href="#faq" 
+      data-nav-link-v2 
+      class="px-4 py-3 rounded-xl text-slate-200 hover:bg-teal-500/10 hover:text-teal-300 font-semibold text-sm transition-colors cursor-pointer flex items-center gap-2.5"
+    >
+      <span class="text-teal-400 text-base">❓</span> Preguntas Frecuentes
+    </a>
+
+    <div class="pt-3 mt-2 border-t border-teal-500/20 flex flex-col gap-2.5">
+      <button 
+        type="button"
+        data-open-enroll-modal
+        data-preset-category="Sub 15 (Colegio Fanning)"
+        class="w-full py-3.5 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 text-slate-950 text-xs font-black uppercase tracking-wider text-center cursor-pointer shadow-lg shadow-teal-500/20"
+      >
+        Reservar Clase de Prueba Gratis
+      </button>
+      <a 
+        href="/v1" 
+        class="text-center py-2.5 rounded-xl border border-slate-700/60 text-xs font-semibold text-slate-400 hover:text-teal-300 bg-slate-900/60 cursor-pointer"
+      >
+        Ver Versión 1 Clásica
+      </a>
+    </div>
+  </div>
+</header>

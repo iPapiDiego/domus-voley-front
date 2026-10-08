@@ -1,0 +1,26 @@
+# Cloudflare Pages Headers Configuration
+# Global Security & Performance Rules for Domus Voleibol Club
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Cache Astro static bundles immutably (1 year)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images & media assets immutably
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/videos/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/screenshots/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# HTML pages cache control (revalidate frequently for updates)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
