@@ -1,11 +1,44 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import TacticalFundamentals from '../components/TacticalFundamentals.astro';
+import About from '../components/About.astro';
+import Categories from '../components/Categories.astro';
+import Benefits from '../components/Benefits.astro';
+import ScheduleLocation from '../components/ScheduleLocation.astro';
+import Gallery from '../components/Gallery.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Faq from '../components/Faq.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Footer from '../components/Footer.astro';
+import Modal from '../components/Modal.astro';
+import FloatingWhatsapp from '../components/FloatingWhatsapp.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+  title="Domus Voleibol Club | Academia Oficial de Vóley en Jesús María, Lima"
+  description="Academia formativa y competitiva de voleibol en el Colegio Teresa González de Fanning (Jesús María, Lima). Categorías Semillero, Menores, Juveniles y Adultos con entrenamientos de alto rendimiento."
+>
+  <Navbar />
+  
+  <main>
+    <Hero />
+    <TacticalFundamentals />
+    <About />
+    <Categories />
+    <Benefits />
+    <ScheduleLocation />
+    <Gallery />
+    <Testimonials />
+    <Faq />
+    <CtaBanner />
+  </main>
+
+  <Footer />
+  <Modal />
+  <FloatingWhatsapp />
+
+  <!-- Separated client-side JavaScript entrypoint -->
+  <script src="../scripts/main.js"></script>
 </Layout>

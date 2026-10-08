@@ -1,0 +1,129 @@
+---
+// About.astro - Club Story, Philosophy & Pillars with Sports Identity
+---
+
+<section id="nosotros" class="py-20 md:py-32 relative bg-[#040f18] overflow-hidden">
+  
+  <!-- Ambient Glow & Court Lines -->
+  <div class="absolute top-1/2 left-0 w-96 h-96 bg-teal-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+  <div class="absolute inset-0 bg-court-lines opacity-10 pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Left Column: Visual Sports Collage -->
+      <div class="about-left lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          
+          <!-- Main Action Photo -->
+          <div class="relative rounded-3xl overflow-hidden border-2 border-teal-500/40 shadow-2xl shadow-black/90 aspect-[4/5] group">
+            <img 
+              src="/images/spiker-net.jpg" 
+              alt="Entrenamiento intenso en Domus Voleibol Club" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#040f18] via-transparent to-transparent opacity-80"></div>
+
+            <!-- Overlaid Glass Card -->
+            <div class="absolute bottom-6 left-6 right-6 p-5 card-sport rounded-2xl border border-teal-400/40 backdrop-blur-md">
+              <div class="flex items-center gap-3">
+                <img src="/images/logo.png" alt="DVC" class="w-12 h-12 rounded-full border-2 border-teal-400 p-0.5 bg-[#051a27] shrink-0" />
+                <div>
+                  <p class="font-display text-2xl font-black text-white leading-tight uppercase sports-italic">
+                    DOMUS: NUESTRO HOGAR
+                  </p>
+                  <p class="text-xs text-teal-300 font-semibold">Pasión, Técnica y Disciplina en Jesús María</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Overlaid Mini Card 1 (Top Right) -->
+          <div class="absolute -top-6 -right-6 hidden sm:flex items-center gap-3 px-5 py-3 rounded-2xl card-sport border border-teal-400/50 shadow-2xl animate-sports-float">
+            <span class="text-2xl">⚡</span>
+            <div>
+              <p class="text-[10px] uppercase font-black text-teal-400 tracking-wider">Alto Rendimiento</p>
+              <p class="text-xs text-white font-extrabold">Formación integral</p>
+            </div>
+          </div>
+
+          <!-- Secondary Overlaid Mini Card 2 (Bottom Left) -->
+          <div class="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 px-4 py-2.5 rounded-2xl card-sport border border-teal-400/50 shadow-2xl">
+            <span class="text-xl">🏆</span>
+            <div>
+              <p class="text-[10px] uppercase font-black text-teal-400 tracking-wider">Sede Central</p>
+              <p class="text-xs text-white font-extrabold">Colegio Fanning</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Story & 4 Pillars -->
+      <div class="about-right lg:col-span-7 flex flex-col justify-center">
+        
+        <div class="section-header">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-teal-500/15 border-l-2 border-teal-400 text-teal-300 text-xs font-black uppercase tracking-widest mb-3">
+            // ADN DOMUS VOLEIBOL
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-black uppercase text-white leading-[0.95] mb-6">
+            Forjando atletas con <span class="text-gradient-neon sports-italic">espíritu de equipo</span>
+          </h2>
+          <p class="text-slate-200 text-base sm:text-lg leading-relaxed mb-6">
+            <strong>"Domus"</strong> proviene del latín y significa <em>hogar</em>. En <strong>Domus Voleibol Club</strong> concebimos la cancha como nuestro hogar y a cada deportista como parte de nuestra familia. Desde nuestros inicios en <strong>Jesús María</strong>, formamos jugadores con una base atlética sólida, mentalidad ganadora y amor incondicional por el vóley.
+          </p>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-8">
+            Ya sea que busques iniciarte desde cero en turnos formativos o competir en ligas y torneos exigentes, te brindamos entrenadores capacitados, metodología progresiva y un grupo que te impulsará en cada punto.
+          </p>
+        </div>
+
+        <!-- 4 Pillars Sports Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          
+          <div class="p-4 rounded-2xl card-sport border border-teal-500/20 hover:border-teal-400/50 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-display font-black text-xl mb-3">
+              01
+            </div>
+            <h3 class="text-white font-bold text-base mb-1 uppercase font-display tracking-wide">Fundamentos & Balón</h3>
+            <p class="text-xs text-slate-300 leading-normal">
+              Corrección del gesto motriz en saque, voleo, antebrazo y remate con repetición inteligente.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl card-sport border border-teal-500/20 hover:border-teal-400/50 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-display font-black text-xl mb-3">
+              02
+            </div>
+            <h3 class="text-white font-bold text-base mb-1 uppercase font-display tracking-wide">Pliometría & Físico</h3>
+            <p class="text-xs text-slate-300 leading-normal">
+              Entrenamiento de salto vertical, agilidad de pies, velocidad de desplazamiento y resistencia anaeróbica.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl card-sport border border-teal-500/20 hover:border-teal-400/50 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-display font-black text-xl mb-3">
+              03
+            </div>
+            <h3 class="text-white font-bold text-base mb-1 uppercase font-display tracking-wide">Táctica & Rotación</h3>
+            <p class="text-xs text-slate-300 leading-normal">
+              Sistemas de juego 4-2 y 5-1, coberturas defensivas y lectura anticipada de la jugada rival.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl card-sport border border-teal-500/20 hover:border-teal-400/50 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-display font-black text-xl mb-3">
+              04
+            </div>
+            <h3 class="text-white font-bold text-base mb-1 uppercase font-display tracking-wide">Hermandad Deportiva</h3>
+            <p class="text-xs text-slate-300 leading-normal">
+              Compañerismo, resiliencia ante el error, celebración del punto ajeno y amistades para toda la vida.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

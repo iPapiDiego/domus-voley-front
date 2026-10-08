@@ -1,0 +1,142 @@
+---
+// Faq.astro - Frequently Asked Questions Accordion
+---
+
+<section id="faq" class="py-20 md:py-32 relative bg-[#05131d] overflow-hidden">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="section-header text-center mb-16">
+      <span class="text-teal-400 text-xs sm:text-sm font-bold uppercase tracking-widest inline-block mb-3">
+        // RESOLVEMOS TUS DUDAS
+      </span>
+      <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-black uppercase text-white leading-tight mb-5">
+        Preguntas <span class="text-gradient">Frecuentes</span>
+      </h2>
+      <p class="text-slate-300 text-base sm:text-lg">
+        Todo lo que necesitas saber antes de dar tu primer saque con Domus Voleibol Club.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4">
+      
+      <!-- FAQ 1 -->
+      <div class="faq-item card-glass rounded-2xl border border-teal-500/20 overflow-hidden transition-all duration-300">
+        <button 
+          type="button" 
+          class="faq-trigger w-full py-5 px-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+          aria-expanded="false"
+        >
+          <span class="font-display text-xl sm:text-2xl font-bold uppercase text-white">
+            ¿Necesito experiencia previa para ingresar?
+          </span>
+          <span class="faq-icon text-teal-400 transition-transform duration-300 shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed pb-6 border-t border-teal-500/15 pt-4">
+            No, para nada. En <strong>Domus Voleibol Club</strong> recibimos a personas que nunca han jugado como a jugadores con experiencia. En nuestras categorías de Iniciación y Adultos Principiante te enseñamos la postura, el voleo y el saque desde cero con atención personalizada.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item card-glass rounded-2xl border border-teal-500/20 overflow-hidden transition-all duration-300">
+        <button 
+          type="button" 
+          class="faq-trigger w-full py-5 px-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+          aria-expanded="false"
+        >
+          <span class="font-display text-xl sm:text-2xl font-bold uppercase text-white">
+            ¿A partir de qué edad pueden inscribirse los alumnos?
+          </span>
+          <span class="faq-icon text-teal-400 transition-transform duration-300 shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed pb-6 border-t border-teal-500/15 pt-4">
+            Aceptamos alumnos desde los <strong>6 años de edad</strong> en nuestra categoría Semillero, hasta jóvenes de 13 a 17 años y adultos sin límite de edad en los turnos nocturnos y de fin de semana.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item card-glass rounded-2xl border border-teal-500/20 overflow-hidden transition-all duration-300">
+        <button 
+          type="button" 
+          class="faq-trigger w-full py-5 px-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+          aria-expanded="false"
+        >
+          <span class="font-display text-xl sm:text-2xl font-bold uppercase text-white">
+            ¿Ofrecen clase de prueba o evaluación de nivel?
+          </span>
+          <span class="faq-icon text-teal-400 transition-transform duration-300 shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed pb-6 border-t border-teal-500/15 pt-4">
+            ¡Sí! Puedes coordinar una sesión de prueba previa vía WhatsApp al <strong>+51 979 833 360</strong> para que vivas la dinámica de entrenamiento, conozcas al entrenador de tu turno y te sientas completamente a gusto.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item card-glass rounded-2xl border border-teal-500/20 overflow-hidden transition-all duration-300">
+        <button 
+          type="button" 
+          class="faq-trigger w-full py-5 px-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+          aria-expanded="false"
+        >
+          <span class="font-display text-xl sm:text-2xl font-bold uppercase text-white">
+            ¿Qué indumentaria o implementos debo llevar?
+          </span>
+          <span class="faq-icon text-teal-400 transition-transform duration-300 shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed pb-6 border-t border-teal-500/15 pt-4">
+            Solo necesitas ropa deportiva cómoda (polo deportivo, short o licra), zapatillas de deporte con buen agarre, rodilleras (opcional pero recomendado) y tu botella de hidratación. El club proporciona balones reglamentarios, conos y redes.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item card-glass rounded-2xl border border-teal-500/20 overflow-hidden transition-all duration-300">
+        <button 
+          type="button" 
+          class="faq-trigger w-full py-5 px-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+          aria-expanded="false"
+        >
+          <span class="font-display text-xl sm:text-2xl font-bold uppercase text-white">
+            ¿Dónde queda exactamente la sede de entrenamiento?
+          </span>
+          <span class="faq-icon text-teal-400 transition-transform duration-300 shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed pb-6 border-t border-teal-500/15 pt-4">
+            Entrenamos en las instalaciones deportivas del <strong>Colegio Teresa González de Fanning</strong>, en el distrito de <strong>Jesús María, Lima</strong>. Es un local de muy fácil acceso desde la Av. Brasil y distritos cercanos como Breña, Magdalena, Pueblo Libre y San Isidro.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

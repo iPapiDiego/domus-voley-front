@@ -1,0 +1,257 @@
+---
+// Categories.astro - Training programs & categories
+---
+
+<section id="categorias" class="py-20 md:py-32 relative bg-[#071926]/90 overflow-hidden">
+  <!-- Decorative background effects -->
+  <div class="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+  <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-sky-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="section-header text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <span class="text-teal-400 text-xs sm:text-sm font-bold uppercase tracking-widest inline-block mb-3">
+        // PROGRAMAS DEPORTIVOS
+      </span>
+      <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-black uppercase text-white leading-tight mb-5">
+        Una categoría ideal <span class="text-gradient">para cada etapa</span>
+      </h2>
+      <p class="text-slate-300 text-base sm:text-lg">
+        Diseñamos planes de entrenamiento específicos para cada edad y nivel de experiencia. ¡Descubre el programa perfecto para ti o tus hijos!
+      </p>
+    </div>
+
+    <!-- Category Cards Grid -->
+    <div class="category-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      
+      <!-- Card 1: Semillero / Iniciación -->
+      <div class="category-card card-glass rounded-3xl overflow-hidden flex flex-col justify-between border border-teal-500/20 hover:border-teal-400/50 hover:shadow-2xl hover:shadow-teal-900/30 transition-all duration-300 group">
+        <div>
+          <!-- Image Banner -->
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src="/images/court-ball.jpg" 
+              alt="Semillero e iniciación Domus Voleibol" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a1f2e] via-black/40 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full bg-teal-500 text-[#05131d] font-extrabold text-xs tracking-wider uppercase">
+                6 a 12 Años
+              </span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold uppercase text-white group-hover:text-teal-400 transition-colors mb-2">
+              Semillero & Iniciación
+            </h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5">
+              Enfocado en el desarrollo psicomotriz, coordinación, voleo básico, saque y compañerismo en un entorno dinámico y seguro.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Desarrollo motor y reflejos</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Fundamentos de voleo y recepción</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Juegos aplicados y recreativos</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0">
+          <button 
+            data-open-modal 
+            data-category="Semillero (6 a 12 años)"
+            class="w-full py-3 px-4 rounded-xl bg-teal-500/10 hover:bg-teal-500 border border-teal-500/40 hover:border-teal-400 text-teal-300 hover:text-[#05131d] font-bold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer text-center"
+          >
+            Inscribirme a Semillero
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Menores & Juvenil -->
+      <div class="category-card card-glass rounded-3xl overflow-hidden flex flex-col justify-between border border-teal-500/20 hover:border-teal-400/50 hover:shadow-2xl hover:shadow-teal-900/30 transition-all duration-300 group">
+        <div>
+          <!-- Image Banner -->
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src="/images/jump-serve.jpg" 
+              alt="Categoría menores y juvenil voleibol" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-t from-[#0a1f2e] via-black/40 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full bg-teal-500 text-[#05131d] font-extrabold text-xs tracking-wider uppercase">
+                13 a 17 Años
+              </span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold uppercase text-white group-hover:text-teal-400 transition-colors mb-2">
+              Menores & Juvenil
+            </h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5">
+              Técnica rigurosa, salto de remate, colocación táctica y defensa. Preparación para torneos y ligas competitivas.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Ataque, bloqueo y salto vertical</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Sistemas de rotación y recepción</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Partidos y topes amistosos</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0">
+          <button 
+            data-open-modal 
+            data-category="Juvenil (13 a 17 años)"
+            class="w-full py-3 px-4 rounded-xl bg-teal-500/10 hover:bg-teal-500 border border-teal-500/40 hover:border-teal-400 text-teal-300 hover:text-[#05131d] font-bold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer text-center"
+          >
+            Inscribirme a Juvenil
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Mayores & Adultos (Mixto) -->
+      <div class="category-card card-glass rounded-3xl overflow-hidden flex flex-col justify-between border-2 border-teal-400/40 shadow-xl shadow-teal-950/40 hover:border-teal-300 hover:shadow-2xl transition-all duration-300 group relative">
+        <div class="absolute -top-3 right-6 z-20">
+          <span class="px-3 py-1 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 text-slate-900 font-black text-[10px] uppercase tracking-wider shadow-md">
+            ⭐ Muy Popular
+          </span>
+        </div>
+
+        <div>
+          <!-- Image Banner -->
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src="/images/libero-defense.jpg" 
+              alt="Categoría mayores adultos voleibol" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a1f2e] via-black/40 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full bg-teal-400 text-[#05131d] font-extrabold text-xs tracking-wider uppercase">
+                18+ Años / Libre
+              </span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold uppercase text-white group-hover:text-teal-400 transition-colors mb-2">
+              Mayores & Adultos
+            </h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5">
+              Entrena después de tu rutina diaria. Clases dinámicas para aprender desde cero o mejorar tu nivel, con partidos todos los días.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Acondicionamiento físico completo</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Modalidad Mixta y Femenina</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Partidos dirigidos al final de sesión</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0">
+          <button 
+            data-open-modal 
+            data-category="Mayores / Adultos (18+ años)"
+            class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-teal-500 to-teal-400 hover:from-teal-400 hover:to-teal-300 text-[#05131d] font-bold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer text-center shadow-lg shadow-teal-500/25"
+          >
+            Inscribirme a Mayores
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Competitivo & Alto Rendimiento -->
+      <div class="category-card card-glass rounded-3xl overflow-hidden flex flex-col justify-between border border-teal-500/20 hover:border-teal-400/50 hover:shadow-2xl hover:shadow-teal-900/30 transition-all duration-300 group">
+        <div>
+          <!-- Image Banner -->
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src="/images/match-point.jpg" 
+              alt="Equipo competitivo Domus Voleibol" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a1f2e] via-black/40 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full bg-teal-500 text-[#05131d] font-extrabold text-xs tracking-wider uppercase">
+                Avanzado / Torneos
+              </span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold uppercase text-white group-hover:text-teal-400 transition-colors mb-2">
+              Equipo Competitivo
+            </h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5">
+              Para jugadores con experiencia previa que desean competir en ligas locales, torneos inter-clubes y campeonatos de Lima.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Estrategia táctica avanzada (5-1)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Pliometría y potencia muscular</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Representación oficial en torneos</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0">
+          <button 
+            data-open-modal 
+            data-category="Competitivo / Avanzado"
+            class="w-full py-3 px-4 rounded-xl bg-teal-500/10 hover:bg-teal-500 border border-teal-500/40 hover:border-teal-400 text-teal-300 hover:text-[#05131d] font-bold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer text-center"
+          >
+            Postular a Competitivo
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

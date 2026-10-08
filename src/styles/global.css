@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Teko', sans-serif;
+
+  --color-brand-dark: #040f18;
+  --color-brand-card: #081b29;
+  --color-brand-card-hover: #0d283c;
+  --color-brand-teal: #109b8b;
+  --color-brand-teal-light: #2dd4bf;
+  --color-brand-teal-neon: #00f2d4;
+  --color-brand-teal-dark: #09685e;
+  --color-brand-blue: #0b496d;
+  --color-brand-blue-light: #1670a6;
+  --color-brand-accent: #ffb703;
+  --color-brand-orange: #ff5722;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #040f18;
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+/* Sports Typography */
+.font-display {
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.sports-italic {
+  font-style: italic;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040f18;
+}
+::-webkit-scrollbar-thumb {
+  background: #0e3b4f;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #109b8b;
+}
+
+/* Sports Glow Effects */
+.glow-teal {
+  box-shadow: 0 0 35px -5px rgba(16, 155, 139, 0.45);
+}
+
+.glow-teal-lg {
+  box-shadow: 0 0 65px -10px rgba(0, 242, 212, 0.4);
+}
+
+.glow-teal-sm {
+  box-shadow: 0 0 15px 0px rgba(16, 155, 139, 0.4);
+}
+
+.glow-neon {
+  box-shadow: 0 0 25px rgba(0, 242, 212, 0.6);
+}
+
+.glow-blue {
+  box-shadow: 0 0 35px -5px rgba(14, 112, 166, 0.4);
+}
+
+/* Text Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 15%, #2dd4bf 55%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-neon {
+  background: linear-gradient(135deg, #ffffff 10%, #00f2d4 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, #5eead4 0%, #109b8b 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-fire {
+  background: linear-gradient(135deg, #fde047 0%, #f97316 50%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism & Cards */
+.card-glass {
+  background: rgba(8, 27, 41, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(45, 212, 191, 0.18);
+}
+
+.card-glass:hover {
+  border-color: rgba(45, 212, 191, 0.5);
+  background: rgba(13, 40, 60, 0.85);
+}
+
+.card-sport {
+  background: linear-gradient(145deg, rgba(8, 27, 41, 0.9) 0%, rgba(5, 17, 26, 0.95) 100%);
+  border: 1px solid rgba(16, 155, 139, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-sport:hover {
+  border-color: rgba(0, 242, 212, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px -10px rgba(0, 242, 212, 0.2);
+}
+
+/* Volleyball Court Patterns */
+.bg-court-lines {
+  background-image: 
+    linear-gradient(rgba(45, 212, 191, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 212, 191, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Court net pattern overlay */
+.court-net-overlay {
+  background-image: radial-gradient(rgba(45, 212, 191, 0.15) 1.5px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Sports Diagonal Tape Badge */
+.sport-badge {
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.sport-badge-lg {
+  clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+}
+
+/* Infinite Sports Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Scanline / Sport Broadcast Effect */
+.broadcast-scanlines {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+}
+
+/* Floating animation */
+@keyframes floatSports {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
+}
+
+.animate-sports-float {
+  animation: floatSports 5s ease-in-out infinite;
+}
